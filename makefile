@@ -23,13 +23,13 @@ $(foreach program,$(programs),$(eval $(program): $($(program)_objects)))
 	node b9.js $^ > $@
 
 %.o : %.cpp
-	$(CXX) -o $@ -c $< $(cflags) $(CFLAGS)
+	$(CXX) -g -o $@ -c $< $(cflags) $(CFLAGS)
 
 %.so: %.o
-	$(CXX) -std=c++11 -shared -o $@ $^ $(CFLAGS)
+	$(CXX) -g -std=c++11 -shared -o $@ $^ $(CFLAGS)
 
 $(programs): $(LIB)
-	$(CXX) -o $@ -lm $^ -ldl $(cflags) $(CFLAGS) $(LINK)
+	$(CXX) -g -o $@ -lm $^ -ldl $(cflags) $(CFLAGS) $(LINK)
 
 $(LIB): $(omr_srcdir)
 	(cd $(omr_srcdir)/; ./configure)
