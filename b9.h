@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <cstring>
 
+#include "b9ras.hpp"
+
 /* Bytecodes */
 
 /**
@@ -117,6 +119,7 @@ public:
          stackEnd(&stack[ (sizeof (stack)/sizeof(StackElement)) - 16])
     {
         std::memset(stack, 0, sizeof(stack));
+        initializeJ9RAS(this);
     }
 
     StackElement stack[1000];
@@ -125,6 +128,7 @@ public:
     struct ExportedFunctionData *functions;
     struct PrimitiveData *primitives;
     const char ** stringTable;
+    B9RAS *b9ras;
 
     /* Command Line Parameters */
     int loopCount = 1;
