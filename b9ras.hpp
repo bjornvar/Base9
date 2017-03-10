@@ -8,6 +8,10 @@
 #ifndef B9RAS_HPP_
 #define B9RAS_HPP_
 
+/*
+ * @ddr_namespace: default
+ */
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>

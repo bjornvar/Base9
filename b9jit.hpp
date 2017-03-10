@@ -1,7 +1,9 @@
-
-
 #ifndef B9_JIT_INCL
 #define B9_JIT_INCL
+
+/*
+ * @ddr_namespace: default
+ */
 
 namespace TR
 {

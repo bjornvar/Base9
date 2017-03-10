@@ -1,6 +1,10 @@
 #ifndef b9_h_
 #define b9_h_
 
+/*
+ * @ddr_namespace: default
+ */
+
 #include <cstdint>
 #include <cstring>
 

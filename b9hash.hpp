@@ -1,3 +1,6 @@
+/*
+ * @ddr_namespace: default
+ */
 
 #include "b9.h"
 
