@@ -23,15 +23,16 @@ readDDRBlob(B9RAS *b9ras)
 	FILE *f = fopen(filename, "r");
 	fseek(f, 0L, SEEK_END);
 	ddrFileLength = ftell(f);
+	rewind(f);
 
 	/* Read blob */
 	if ((ddrFileLength > 0) && (ddrFileLength <= 0x7FFFFFFF)) {
 		void *ddrData;
-		ddrData = malloc((UDATA) ddrFileLength);
+		ddrData = malloc(ddrFileLength);
 		b9ras->ddrData = ddrData;
 
 		if (ddrFileLength != fread(ddrData, 1, ddrFileLength, f)) {
-			printf("Error reading blob\n");
+			fprintf(stderr, "Error reading blob.\n\tError: %d\n\tEOF: %d\n", ferror(f), feof(f));
 			free(filename);
 			fclose(f);
 			exit(-1);
