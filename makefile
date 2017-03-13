@@ -35,6 +35,9 @@ $(LIB): $(omr_srcdir)
 	(cd $(omr_srcdir)/; ./configure)
 	(cd $(omr_srcdir)/jitbuilder; make)
 
+ddrgen:
+	$(CXX) -std=c++11 -E b9.h b9jit.hpp b9hash.hpp b9ras.hpp
+
 program: b9
 	node b9.js program.src > program.cpp
 	cat program.cpp
