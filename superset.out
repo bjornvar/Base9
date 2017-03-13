@@ -1,0 +1,60 @@
+S|B9RAS|B9RASPointer|
+F|eyecatcher|eyecatcher|U8[]|U8[]
+F|bitpattern1|bitpattern1|U32|U32
+F|bitpattern2|bitpattern2|U32|U32
+F|version|version|I32|I32
+F|length|length|I32|I32
+F|ddrData|ddrData|JIT_3_args*|JIT_3_args*
+F|mainThreadOffset|mainThreadOffset|UDATA|UDATA
+F|omrthreadNextOffset|omrthreadNextOffset|UDATA|UDATA
+F|osthreadOffset|osthreadOffset|UDATA|UDATA
+F|idOffset|idOffset|UDATA|UDATA
+F|typedefsLen|typedefsLen|UDATA|UDATA
+F|typedefs|typedefs|UDATA|UDATA
+F|env|env|UDATA|UDATA
+F|vm|vm|UDATA|UDATA
+F|buildID|buildID|U64|U64
+F|osversion|osversion|U8[]|U8[]
+F|osarch|osarch|U8[]|U8[]
+F|osname|osname|U8[]|U8[]
+F|cpus|cpus|U32|U32
+F|environment|environment|JIT_3_args*|JIT_3_args*
+F|memory|memory|U64|U64
+F|hostname|hostname|U8[]|U8[]
+F|ipAddresses|ipAddresses|U8[]|U8[]
+F|pid|pid|UDATA|UDATA
+F|tid|tid|UDATA|UDATA
+S|ExportedFunctionData|ExportedFunctionDataPointer|
+F|name|name|U8*|const char*
+F|program|program|U32*|Instruction*
+F|jitAddress|jitAddress|U64|uint64_t
+S|PrimitiveData|PrimitiveDataPointer|
+F|name|name|U8*|const char*
+F|address|address|JIT_3_args*|PrimitiveFunction*
+S|ExecutionContext|ExecutionContextPointer|
+F|stack|stack|I64[]|StackElement[]
+F|stackPointer|stackPointer|I64*|StackElement*
+F|stackEnd|stackEnd|I64*|StackElement*
+F|functions|functions|ExportedFunctionData*|ExportedFunctionData*
+F|primitives|primitives|PrimitiveData*|PrimitiveData*
+F|stringTable|stringTable|U8**|const char**
+F|b9ras|b9ras|struct B9RAS*|struct B9RAS*
+F|loopCount|loopCount|I32|int
+F|verbose|verbose|I32|int
+F|debug|debug|I32|int
+F|directCall|directCall|I32|int
+F|passParameters|passParameters|I32|int
+F|operandStack|operandStack|I32|int
+F|inlineDepthAllowed|inlineDepthAllowed|I32|int
+F|name|name|U8*|const char*
+F|library|library|JIT_3_args*|JIT_3_args*
+S|_slots_|_slots_Pointer|
+F|pointer_slots|pointer_slots|heap_allocated_*[]|heap_allocated_*[]
+F|int64_t_slots|int64_t_slots|I64[]|int64_t[]
+F|int32_t_slots|int32_t_slots|I32[]|int32_t[]
+F|int8_t_slots|int8_t_slots|I8[]|int8_t[]
+F|char_slots|char_slots|U8[]|char[]
+S|heap_allocated|heap_allocatedPointer|
+F|size|size|I32|int32_t
+F|type|type|I32|int32_t
+F|d|d|_slots_|_slots_union_
