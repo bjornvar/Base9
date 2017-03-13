@@ -50,3 +50,8 @@ Run `ddrgen`:
 omr/ddrgen -m macroList -f objectFiles -b ddr.dat
 ```
 
+Running with DDR
+----------------
+Place `ddr.dat` in working directory. This is where `b9` expects to find it.
+Run `b9`, e.g. using `make program`. The program will hang when completed, allowing you to call `gcore`. The resulting core file contains the DDR structure blob (search for pattern "J9VMRAS").
+
