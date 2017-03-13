@@ -30,6 +30,7 @@ typedef unsigned int U_32;
 typedef int I_32;
 typedef unsigned long long U_64;
 typedef unsigned long long UDATA;
+typedef long long IDATA;
 
 class ExecutionContext;
 
