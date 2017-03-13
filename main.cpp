@@ -51,6 +51,11 @@ main(int argc, char *argv[])
     printf("JIT speedup = %f\n", timeInterp * 1.0 / timeJIT);
 
     if (resultInterp == resultJit) {
+        while (1) {
+        	printf(".");
+        	sleep(1);
+        }
+
         return EXIT_SUCCESS;
     } else {
         return EXIT_FAILURE;
